@@ -84,7 +84,7 @@ body {
 }
 
 .info-text h2 {
-    margin-bottom: 10px; /* Espace entre les titres */
+    margin-bottom: 5px; /* Espace entre les titres */
 }
 
 .info-text p {
@@ -92,13 +92,18 @@ body {
 }
 
 .info-text-2 {
-    margin: 10px 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
 .info-text-2-2 {
+    padding-left: 10px;
+}
+
+.info-text-2-2-img{
+    width: 30px;
+    height: 30px;
     padding-left: 10px;
 }
 

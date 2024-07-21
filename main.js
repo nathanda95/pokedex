@@ -8,6 +8,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const name = document.getElementById('nom');
   const image = document.getElementById('imagePokemon');
   const nPokedex = document.getElementById('numeroPokedex');
+  const trait = document.getElementById('trait');
+  const type1 = document.getElementById('Type1');
+  const type2 = document.getElementById('Type2');
+  const poids = document.getElementById('poids');
+  const taille = document.getElementById('taille');
+  const titreType = document.getElementById('titreType');
 
   if (!input || !image) {
     console.error('Un ou plusieurs éléments requis sont manquants.');
@@ -38,6 +44,25 @@ document.addEventListener('DOMContentLoaded', () => {
             image.hidden = false;
             image.src = response.data.sprites.regular;
             nPokedex.innerText = response.data.pokedex_id;
+            if (response.data.types.length === 2)
+            {
+              titreType.innerText = "Types: "
+              trait.hidden = false;
+              type1.src = response.data.types[0].image;
+              type2.src = response.data.types[1].image;
+              type2.hidden = false;
+              type1.hidden = false;
+            }
+            else
+            {
+              titreType.innerText = "Type: "
+              trait.hidden = true;
+              type1.src = response.data.types[0].image;
+              type2.hidden = true;
+              type1.hidden = false;
+            }
+            poids.innerText = response.data.weight;
+            taille.innerText = response.data.height;
           } else {
             alert('No image found for this Pokémon.');
           }
