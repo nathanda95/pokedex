@@ -1,20 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>API Call Button</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="x-icon">
 </head>
 <body>
-  <script type="module" src="main.js"></script>
-  <input type="text" id="myInput" value="Choisi ton pokemon">
-  <button id="myButton">Get Value</button>
-  <div>
-    <img id="imagePokemon" src="url-de-l-image" hidden>
-  </div>
-  <div>
-    <img id="imageType1" src="url-de-l-image" hidden>
-    <img id="imageType2" src="url-de-l-image" hidden>
-  </div>
+    <div class="container">
+        <div class="search-bar">
+            <img src="images/loupe.png">
+            <input id="myInput" type="text" placeholder="Search...">
+        </div>
+        <div class="info-section">
+            <div class="image-placeholder">
+                <img id="imagePokemon" src="path/to/your/image.jpg" alt="">
+            </div>
+            <div class="info-text">
+                <h2>Informations générales:</h2>
+                <h3 id="nom">Subheading</h3>
+                <div class="info-text-2">
+                    <p>Numéro de Pokedex:</p>
+                    <p id="numeroPokedex" class="info-text-2-2"></p>
+                </div>
+                <p></p>
+            </div>
+        </div>
+        <div class="stats-section">
+            <div class="stat-box">Statistique</div>
+            <div class="stat-box">Résistance / Faiblesse</div>
+        </div>
+    </div>
+    <script type="module" src="main.js"></script>
 </body>
 </html>
