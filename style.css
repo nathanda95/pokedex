@@ -12,9 +12,13 @@ body {
 }
 
 .page-principale {
+    width: 80%;
+    max-width: 1200px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    gap: 20px
+    align-items: center;
+    gap: 20px; /* Espace entre les sections principales */
 }
 
 .container {
@@ -169,7 +173,7 @@ body {
     left: 0;
     height: 2px;
     width: 100%;
-    background-color: #33333300;
+    background-color: #ffffff00;
     transform: scaleX(0);
     transition: all 0.3s ease;
   }
@@ -214,6 +218,6 @@ body {
   }
   
   .radio-inputs .radio input:checked + .name {
-    background-color: #ffffff80;
+    background-color: #E0FFFF;
     font-weight: 600;
   }
