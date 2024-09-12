@@ -1,20 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>API Call Button</title>
-  <script type="module" crossorigin src="/assets/index-CQlCvqFx.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="icon" href="/assets/favicon-xSdzOEWp.ico" type="x-icon">
+  <script type="module" crossorigin src="/assets/index-CrdVZ_si.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-By8YENEp.css">
 </head>
 <body>
-  <input type="text" id="myInput" value="Choisi ton pokemon">
-  <button id="myButton">Get Value</button>
-  <div>
-    <img id="imagePokemon" src="url-de-l-image" hidden>
-  </div>
-  <div>
-    <img id="imageType1" src="url-de-l-image" hidden>
-    <img id="imageType2" src="url-de-l-image" hidden>
-  </div>
+    <div class="container">
+        <!--Barre de recherche-->
+        <div class="input-container">
+            <input type="text" id="myInput" required="">
+            <label for="input" class="label">Enter Pokemon Name</label>
+            <div class="underline"></div>
+        </div>
+
+        <!--Bouton de choix de pages-->
+        <div class="radio-inputs">
+            <label class="radio">
+              <input type="radio" name="radio" checked="" id="gen">
+              <span class="name">Général</span>
+            </label>
+            <label class="radio">
+              <input type="radio" name="radio" id="evolve">
+              <span class="name">Evolution</span>
+            </label>
+                
+            <label class="radio">
+              <input type="radio" name="radio" id="other">
+              <span class="name">Autre</span>
+            </label>
+        </div>
+        <!--Page Principale avec les stats générales-->
+        <div class="page-principale" id="principal">
+            <div class="info-section">
+                <div class="image-placeholder">
+                    <img id="imagePokemon" src="path/to/your/image.jpg" alt="">
+                </div>
+                <div class="info-text">
+                    <h2>Informations générales:</h2>
+                    <h3 id="nom">Subheading</h3>
+                    <div class="info-text-2">
+                        <p>Numéro de Pokedex:</p>
+                        <p id="numeroPokedex" class="info-text-2-2"></p>
+                    </div>
+                    <div class="info-text-2">
+                        <p id="titreType">Type:</p>
+                        <img id="Type1" class="info-text-2-2-img" hidden>
+                        <p id="trait" class="info-text-2-2" hidden>-</p>
+                        <img id="Type2" class="info-text-2-2-img" hidden>
+                    </div>
+                    <div class="info-text-2">
+                        <p>Poids:</p>
+                        <p id="poids" class="info-text-2-2"></p>
+                    </div>
+                    <div class="info-text-2">
+                        <p>Taille:</p>
+                        <p id="taille" class="info-text-2-2"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="stats-section">
+                <div class="stat-box">Statistique</div>
+                <div class="stat-box">Résistance / Faiblesse</div>
+            </div>
+        </div>
+        <div class="page-principale">
+            <div class="page-principale-2" id="evolution" hidden>
+                <div class="sous-page" id="evo1" hidden>
+                    <div class="card">
+                        <span></span>
+                        <div class="content">
+                            <img id="imageEvo1" src="path/to/your/image.jpg" alt="">
+                        </div>
+                    </div>
+                    <text id="textEvo1">Test</text>
+                </div>
+                <div class="sous-page"  id="evo2" hidden>
+                    <div class="card">
+                        <span></span>
+                        <div class="content">
+                            <img id="imageEvo2" src="path/to/your/image.jpg" alt="">
+                        </div>
+                    </div>
+                    <text id="textEvo2">Test</text>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
