@@ -9,40 +9,62 @@
 </head>
 <body>
     <div class="container">
-        <div class="search-bar">
-            <img src="images/loupe.png">
-            <input id="myInput" type="text" placeholder="Search...">
+        <!--Barre de recherche-->
+        <div class="input-container">
+            <input type="text" id="myInput" required="">
+            <label for="input" class="label">Enter Pokemon Name</label>
+            <div class="underline"></div>
         </div>
-        <div class="info-section">
-            <div class="image-placeholder">
-                <img id="imagePokemon" src="path/to/your/image.jpg" alt="">
+
+        <!--Bouton de choix de pages-->
+        <div class="radio-inputs">
+            <label class="radio">
+              <input type="radio" name="radio" checked="" id="gen">
+              <span class="name">Général</span>
+            </label>
+            <label class="radio">
+              <input type="radio" name="radio" id="evolve">
+              <span class="name">Evolution</span>
+            </label>
+                
+            <label class="radio">
+              <input type="radio" name="radio" id="other">
+              <span class="name">Autre</span>
+            </label>
+          </div>
+        <!--Page Principale avec les stats générales-->
+        <div class="page-principale">
+            <div class="info-section">
+                <div class="image-placeholder">
+                    <img id="imagePokemon" src="path/to/your/image.jpg" alt="">
+                </div>
+                <div class="info-text">
+                    <h2>Informations générales:</h2>
+                    <h3 id="nom">Subheading</h3>
+                    <div class="info-text-2">
+                        <p>Numéro de Pokedex:</p>
+                        <p id="numeroPokedex" class="info-text-2-2"></p>
+                    </div>
+                    <div class="info-text-2">
+                        <p id="titreType">Type:</p>
+                        <img id="Type1" class="info-text-2-2-img" hidden>
+                        <p id="trait" class="info-text-2-2" hidden>-</p>
+                        <img id="Type2" class="info-text-2-2-img" hidden>
+                    </div>
+                    <div class="info-text-2">
+                        <p>Poids:</p>
+                        <p id="poids" class="info-text-2-2"></p>
+                    </div>
+                    <div class="info-text-2">
+                        <p>Taille:</p>
+                        <p id="taille" class="info-text-2-2"></p>
+                    </div>
+                </div>
             </div>
-            <div class="info-text">
-                <h2>Informations générales:</h2>
-                <h3 id="nom">Subheading</h3>
-                <div class="info-text-2">
-                    <p>Numéro de Pokedex:</p>
-                    <p id="numeroPokedex" class="info-text-2-2"></p>
-                </div>
-                <div class="info-text-2">
-                    <p id="titreType">Type:</p>
-                    <img id="Type1" class="info-text-2-2-img" hidden>
-                    <p id="trait" class="info-text-2-2" hidden>-</p>
-                    <img id="Type2" class="info-text-2-2-img" hidden>
-                </div>
-                <div class="info-text-2">
-                    <p>Poids:</p>
-                    <p id="poids" class="info-text-2-2"></p>
-                </div>
-                <div class="info-text-2">
-                    <p>Taille:</p>
-                    <p id="taille" class="info-text-2-2"></p>
-                </div>
+            <div class="stats-section">
+                <div class="stat-box">Statistique</div>
+                <div class="stat-box">Résistance / Faiblesse</div>
             </div>
-        </div>
-        <div class="stats-section">
-            <div class="stat-box">Statistique</div>
-            <div class="stat-box">Résistance / Faiblesse</div>
         </div>
     </div>
     <script type="module" src="main.js"></script>
