@@ -111,6 +111,11 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         })
         .catch(error => {
+          if (encodeURIComponent(value) === 'zack')
+          {
+            image.hidden = false;
+            image.src = 'images/chevalzack.png';
+          }
           console.error('There was an error with the request!', error);
           alert('Error with the request: ' + error.message);
         });
