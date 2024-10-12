@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     return;
   }
 
-  input.addEventListener('keydown', (event) => {
+  input.addEventListener('keydown', (event) => { // Affiche le pokemon lorsque l'on fait entrer
     //console.log('Key pressed:', event.key); // Vérifiez que l'événement est correctement capturé
     
     if (event.key === 'Enter') {
@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
     evolution.setAttribute('hidden', 'true');
   })
 
-  divEvo1.addEventListener('click', (event) => {
+  divEvo1.addEventListener('click', (event) => { // Affiche le pokemon de l'evo 1 lorsque l'on clique sur une des cartes d'évolution
       const url2 = `${url}/${encodeURIComponent(res.data.evolution.next[0].name)}`; // Encode les caractères spéciaux dans l'URL
 
       //console.log('Requesting URL:', url2); // Affiche la valeur dans la console
@@ -240,9 +240,8 @@ document.addEventListener('DOMContentLoaded', () => {
         evolution.setAttribute('hidden', 'true');
   });
 
-  divEvo2.addEventListener('click', (event) => {
+  divEvo2.addEventListener('click', (event) => { // Affiche le pokemon de l'evo 2 lorsque l'on clique sur une des cartes d'évolution
     const url2 = `${url}/${encodeURIComponent(res.data.evolution.next[1].name)}`; // Encode les caractères spéciaux dans l'URL
-
     //console.log('Requesting URL:', url2); // Affiche la valeur dans la console
     image.src='images/cergle.gif'
     axios.get(url2)
@@ -329,6 +328,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       principal.removeAttribute('hidden');
       evolution.setAttribute('hidden', 'true');
-});
+  });
 
 });
